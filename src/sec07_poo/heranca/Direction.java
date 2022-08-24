@@ -1,6 +1,6 @@
 package sec07_poo.heranca;
 
-public enum Direcao {
+public enum Direction {
 	NORTE,
 	SUL,
 	LESTE,
