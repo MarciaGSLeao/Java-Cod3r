@@ -1,0 +1,13 @@
+package entities;
+
+import exercicios.Calc;
+
+public class Multiply implements Calc{
+
+	@Override
+	public double execute(double a, double b) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

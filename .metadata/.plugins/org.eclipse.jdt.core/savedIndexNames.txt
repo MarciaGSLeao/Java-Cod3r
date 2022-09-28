@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+D:\Marcia\Cursos\Udemy\cod3r\java-Cod3r\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+2128575829.index
+3100778735.index

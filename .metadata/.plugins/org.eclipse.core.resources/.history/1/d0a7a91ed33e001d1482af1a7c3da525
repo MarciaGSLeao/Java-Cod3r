@@ -1,0 +1,7 @@
+package entities;
+
+import exercicios.Calculo;
+
+public class Sum implements Calculo {
+
+}

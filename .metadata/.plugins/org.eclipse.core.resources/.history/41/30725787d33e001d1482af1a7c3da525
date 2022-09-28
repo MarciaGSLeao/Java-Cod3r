@@ -1,0 +1,7 @@
+package entities;
+
+import exercicios.Calc;
+
+public class Multiply implements Calc{
+
+}

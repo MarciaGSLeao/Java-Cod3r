@@ -1,0 +1,7 @@
+package functionalInterfacesFromJava;
+
+public class UsingBinaryOperator {
+	// UMA INTERFACE FUNCIONAL PERMITE CRIAR EXPRESSÕES LAMBDAS
+	// E NO CASO DA INTERFACE FUNCIONAL BINARY OPERATOR, 
+
+}

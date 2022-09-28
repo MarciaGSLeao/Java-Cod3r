@@ -1,0 +1,9 @@
+package exercicios;
+
+@FunctionalInterface
+// Interface funcional é uma interface que implementa apenas
+public interface Calc {
+	
+	public abstract double execute(double a, double b);
+
+}

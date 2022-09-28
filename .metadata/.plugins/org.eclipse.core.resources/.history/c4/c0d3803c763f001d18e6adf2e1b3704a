@@ -1,0 +1,10 @@
+package functionalInterfacesFromJava;
+
+public class UsingForEach {
+	
+	public static void main(String[] args) {
+		
+		
+	}
+
+}

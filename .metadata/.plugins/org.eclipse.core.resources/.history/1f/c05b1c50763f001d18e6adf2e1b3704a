@@ -1,0 +1,12 @@
+package functionalInterfacesFromJava;
+
+import java.util.Arrays;
+
+public class UsingForEach {
+	
+	public static void main(String[] args) {
+		
+		List<String> aprovados = Arrays.class
+	}
+
+}

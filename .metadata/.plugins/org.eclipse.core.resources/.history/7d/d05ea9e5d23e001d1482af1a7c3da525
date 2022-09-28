@@ -1,0 +1,7 @@
+package exercicios;
+
+public interface Calculo {
+	
+	public abstract double execute(doube a, double b)
+
+}

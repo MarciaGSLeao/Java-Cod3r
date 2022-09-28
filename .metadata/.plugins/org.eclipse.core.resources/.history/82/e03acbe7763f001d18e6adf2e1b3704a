@@ -1,0 +1,14 @@
+package functionalInterfacesFromJava;
+
+import java.util.Arrays;
+import java.util.List;
+
+public class UsingForEach {
+	
+	public static void main(String[] args) {
+		
+		List<String> nephwes = Arrays
+				.asList("Eduardo", "Lorenzo", "Laura");
+	}
+
+}

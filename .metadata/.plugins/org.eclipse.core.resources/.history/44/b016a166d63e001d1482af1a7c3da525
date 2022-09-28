@@ -1,0 +1,16 @@
+package application;
+
+import entities.Multiply;
+import entities.Sum;
+import exercicios.Calc;
+
+public class MainProgram2 {
+	
+	public static void main(String[] args) {
+		
+		Calc sum = (x, y) -> {
+			return x + y;
+		};
+	}
+
+}
