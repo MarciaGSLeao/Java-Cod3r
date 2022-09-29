@@ -1,7 +1,0 @@
-package exercicios;
-
-@funublic interface Calc {
-	
-	public abstract double execute(double a, double b);
-
-}
