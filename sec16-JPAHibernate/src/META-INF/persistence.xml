@@ -24,11 +24,12 @@
             <property name="hibernate.dialect"
                       value="org.hibernate.dialect.MySQL57Dialect"/>
             <property name="hibernate.show_sql"
-                      value="true"/>
+                      value="false"/>
             <property name="hibernate.format_sql"
                       value="true"/>
             <property name="hibernate.hbm2ddl.auto"
-                      value="none"/>
+                      value="false"/> 
+                      <!-- o doc de persistência não fará a alteração no banco de dados a partir do valor 'false' da propriedade 'hibernate.hbm2ddl.auto'. -->
                       
         </properties>
         

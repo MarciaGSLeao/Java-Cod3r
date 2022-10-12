@@ -6,7 +6,8 @@ import javax.persistence.Persistence;
 
 import model.entities.User;
 
-public class MainProgram {
+// INSERINDO DADOS...
+public class Program01 {
 	
 	public static void main(String[] args) {
 		
