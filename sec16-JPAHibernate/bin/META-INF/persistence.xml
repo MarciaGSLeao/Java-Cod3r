@@ -29,7 +29,7 @@
                       value="true"/>
             <property name="hibernate.hbm2ddl.auto"
                       value="false"/> 
-                      <!-- o doc de persistência não fará a alteração no banco de dados a partir do valor 'false' da propriedade 'hibernate.hbm2ddl.auto'. -->
+                      <!-- o doc de persistência não fará a alteração na estrutura do banco de dados a partir do valor 'false' da propriedade 'hibernate.hbm2ddl.auto'. -->
                       
         </properties>
         
