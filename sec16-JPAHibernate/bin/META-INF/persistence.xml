@@ -9,6 +9,7 @@
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         
         <class>model.entities.User</class>
+        <class>model.entities.Product</class>
         
         <properties>
         
@@ -28,7 +29,7 @@
             <property name="hibernate.format_sql"
                       value="true"/>
             <property name="hibernate.hbm2ddl.auto"
-                      value="false"/> 
+                      value="true"/> 
                       <!-- o doc de persistência não fará a alteração na estrutura do banco de dados a partir do valor 'false' da propriedade 'hibernate.hbm2ddl.auto'. -->
                       
         </properties>
