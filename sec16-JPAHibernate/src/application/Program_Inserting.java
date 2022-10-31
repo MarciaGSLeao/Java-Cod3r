@@ -7,23 +7,23 @@ import javax.persistence.Persistence;
 import model.entities.User;
 
 // INSERINDO DADOS...
-public class Program01 {
+public class Program_Inserting {
 	
 	public static void main(String[] args) {
 		
-		EntityManagerFactory emf = Persistence.createEntityManagerFactory("sec16-JPAHibernate");
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("mySQL_curso_java_cod3r");
 		EntityManager em = emf.createEntityManager();
 		
 		User newUser1 = new User("Vinny", "vinny@gmail.com");
-//		User newUser2 = new User("Felipe", "felipe@gmail.com");
-//		User newUser3 = new User("João", "joao@gmail.com");
-//		User newUser4 = new User("Helena", "helena@gmail.com");
+		User newUser2 = new User("Felipe", "felipe@gmail.com");
+		User newUser3 = new User("João", "joao@gmail.com");
+		User newUser4 = new User("Helena", "helena@gmail.com");
 		
 		em.getTransaction().begin();
 		em.persist(newUser1);
-//		em.persist(newUser2);
-//		em.persist(newUser3);
-//		em.persist(newUser4);
+		em.persist(newUser2);
+		em.persist(newUser3);
+		em.persist(newUser4);
 		em.getTransaction().commit();
 		em.close();
 		emf.close();

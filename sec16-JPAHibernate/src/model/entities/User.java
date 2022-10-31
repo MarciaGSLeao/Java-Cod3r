@@ -1,18 +1,26 @@
 package model.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
+@Table(name = "user")
 public class User {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Long id;
+	private int id;
+	
+	@Column(name="nome")
 	private String name;
+	
+	@Column(name="email")
 	private String email;
+	// @Transient é um anotation que quando existente, não relaciona uma atributo a uma coluna do BD.
 	
 	public User() {
 	}
@@ -22,12 +30,14 @@ public class User {
 		this.email = email;
 	}
 
-	public Long getId() {
-		return id;
+	public User(int id, String name, String email) {
+		this.id = id;
+		this.name = name;
+		this.email = email;
 	}
 
-	public void setId(Long id) {
-		this.id = id;
+	public int getId() {
+		return id;
 	}
 
 	public String getName() {

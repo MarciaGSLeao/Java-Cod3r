@@ -4,36 +4,34 @@
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
     
-    <persistence-unit name="sec16-JPAHibernate">
+    <!-- AQUI COMEÇA UMA UNIDADE DE PERSISTÊNCIA...
+    	 UMA UNIDADE DE PERSISTÊNCIA, OU "persistence-unit" REPRESENTA AS INFORMAÇÕES
+    	 NECESSÁRIAS PARA A CONEXÃO DE UM BANCO DE DADOS ESPECÍFICO.
+    	 
+    	 ESSE ARQUIVO persistence.xml PODE CONTER VÁRIAS TAGS DE UNIDADES DE PERSISTÊNCIA -->
+
+    <persistence-unit name="mySQL_curso_java_cod3r">
     
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         
         <class>model.entities.User</class>
-        <class>model.entities.Product</class>
         
         <properties>
         
-            <property name="javax.persistence.jdbc.driver"
-                      value="com.mysql.jdbc.Driver"/>
-            <property name="javax.persistence.jdbc.url"
-                      value="jdbc:mysql://localhost/curso_java_cod3r"/>
-            <property name="javax.persistence.jdbc.user"
-                      value="root"/>
-            <property name="javax.persistence.jdbc.password"
-                      value="123456"/>
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/curso_java_cod3r"/>
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <property name="javax.persistence.jdbc.password" value="123456"/>
             
-            <property name="hibernate.dialect"
-                      value="org.hibernate.dialect.MySQL57Dialect"/>
-            <property name="hibernate.show_sql"
-                      value="false"/>
-            <property name="hibernate.format_sql"
-                      value="true"/>
-            <property name="hibernate.hbm2ddl.auto"
-                      value="true"/> 
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL57Dialect"/>
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <!-- <property name="hibernate.hbm2ddl.auto" value="update"/> -->
                       <!-- o doc de persistência não fará a alteração na estrutura do banco de dados a partir do valor 'false' da propriedade 'hibernate.hbm2ddl.auto'. -->
                       
         </properties>
         
     </persistence-unit>
+    <!-- AQUI ENCERRA A UNIDADE DE PERSISTÊNCIA-->
     
 </persistence>

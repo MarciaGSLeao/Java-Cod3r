@@ -1,17 +1,24 @@
 package model.entities;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-public class Product {
+@Table(name = "product")
+public class Product{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
+	@Column(name = "name", nullable = false)
 	private String name;
+	
+	@Column(name = "price", nullable = false, precision = 11, scale = 2)
 	private Double price;
 	
 	public Product() {
@@ -22,6 +29,12 @@ public class Product {
 		this.price = price;
 	}
 
+	public Product(Long id, String name, Double price) {
+		this.id = id;
+		this.name = name;
+		this.price = price;
+	}
+	
 	public String getName() {
 		return name;
 	}
