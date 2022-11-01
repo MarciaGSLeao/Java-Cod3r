@@ -8,8 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "user")
-public class User {
+@Table(name = "users")
+public class Users {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,15 +22,15 @@ public class User {
 	private String email;
 	// @Transient é um anotation que quando existente, não relaciona uma atributo a uma coluna do BD.
 	
-	public User() {
+	public Users() {
 	}
 
-	public User(String name, String email) {
+	public Users(String name, String email) {
 		this.name = name;
 		this.email = email;
 	}
 
-	public User(int id, String name, String email) {
+	public Users(int id, String name, String email) {
 		this.id = id;
 		this.name = name;
 		this.email = email;

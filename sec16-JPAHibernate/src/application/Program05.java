@@ -4,7 +4,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 
-import model.entities.User;
+import model.entities.Users;
 
 // EXCLUINDO UM REGISTRO...
 public class Program05 {
@@ -14,7 +14,7 @@ public class Program05 {
 		EntityManagerFactory emf = Persistence.createEntityManagerFactory("sec16-JPAHibernate");
 		EntityManager em = emf.createEntityManager();
 		
-		User user = em.find(User.class, 8L);
+		Users user = em.find(Users.class, 8L);
 		System.out.println("USUÁRIO ENCONTRADO!\nNOME =>  " + user.getName());
 		
 		if(user != null) {
