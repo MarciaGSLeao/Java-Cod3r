@@ -7,7 +7,7 @@ import javax.persistence.Persistence;
 import model.entities.Users;
 
 // EXCLUINDO UM REGISTRO...
-public class Program05 {
+public class ProgramDeleting {
 
 	public static void main(String[] args) {
 		

@@ -8,8 +8,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "product")
-public class Product{
+@Table(name = "products")
+public class Products{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,15 +21,15 @@ public class Product{
 	@Column(name = "price", nullable = false, precision = 11, scale = 2)
 	private Double price;
 	
-	public Product() {
+	public Products() {
 	}
 
-	public Product(String name, Double price) {
+	public Products(String name, Double price) {
 		this.name = name;
 		this.price = price;
 	}
 
-	public Product(Long id, String name, Double price) {
+	public Products(Long id, String name, Double price) {
 		this.id = id;
 		this.name = name;
 		this.price = price;

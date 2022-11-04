@@ -20,7 +20,8 @@ public class ProgramUpdatingUser {
 		user.setEmail("vinicius@gmail.com");
 		
 		em.getTransaction().begin();
-		em.detach(user);
+		em.detach(user);// o método 'detach' passa o objeto referenciado entre parênteses para um estado "não-gerenciado", 
+						// o que significa que se alguma alteração for feita, só trará efeito se o método 'merge' for chamado posteriormente.
 		em.merge(user); // o método 'merge' é o responsável por realizar a atualização do campo no banco de dados.
 		                // Mesmo que ele não seja explicitamente citado no código fonte, e houver um contexto transacional
 		                // ainda assim, a atualização do campo ocorrerá pois o objeto se encontrará em um estado gerenciado.
