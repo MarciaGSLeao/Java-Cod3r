@@ -9,17 +9,17 @@ import javax.persistence.TypedQuery;
 
 public class DAO<E> {
 	
-	private static EntityManagerFactory emf;
+	private static EntityManagerFactory emf = Persistence.createEntityManagerFactory("mySQL_curso_java_cod3r");;
 	private EntityManager em;
 	private Class<E> classe;
 	
-	static {
-		try {
-			emf = Persistence.createEntityManagerFactory("mySQL_curso_java_cod3r");
-		}catch (Exception e) {
-			// logar -> log4j
-		}
-	}
+//	static {
+//		try {
+//			emf = Persistence.createEntityManagerFactory("mySQL_curso_java_cod3r");
+//		}catch (Exception e) {
+//			// logar -> log4j
+//		}
+//	}
 	
 	public DAO() {
 		this(null);
