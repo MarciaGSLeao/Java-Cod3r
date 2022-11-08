@@ -18,6 +18,8 @@
         <class>model.entities.Products</class>
         <class>model.oneToOne.Clients</class>
         <class>model.oneToOne.Seats</class>
+        <class>model.oneToMany.Orders</class>
+        <class>model.oneToMany.Items</class>
         
         <properties>
         
@@ -27,7 +29,7 @@
             <property name="javax.persistence.jdbc.password" value="123456"/>
             
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL57Dialect"/>
-            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.show_sql" value="false"/>
             <property name="hibernate.format_sql" value="true"/>
             <property name="hibernate.hbm2ddl.auto" value="update"/>
                       <!-- o doc de persistência não fará a alteração na estrutura do banco de dados a partir do valor 'false' da propriedade 'hibernate.hbm2ddl.auto'. -->

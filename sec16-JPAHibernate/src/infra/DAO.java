@@ -48,8 +48,15 @@ public class DAO<E> {
 	public DAO<E> insertAtomic(E entity){
 		return this.openTransaction().insert(entity).closeTransaction();
 	}
+
+	public E getById(Object id) {
+		return em.find(classe, id);
+	}
+	public List<E> getAll(){
+		return this.getAll(10, 0);
+	}
 	
-	public List<E> obtainAll(int quantityRegister, int offset){
+	public List<E> getAll(int quantityRegister, int offset){
 		if(classe == null) {
 			throw new UnsupportedOperationException("Classe nula");
 		}

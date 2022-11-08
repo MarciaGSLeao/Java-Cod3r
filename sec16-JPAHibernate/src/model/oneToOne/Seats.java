@@ -4,6 +4,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -14,6 +15,9 @@ public class Seats {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
 	private String localization;
+	
+	@OneToOne(mappedBy = "seat")
+	private Clients client;
 	
 	public Seats() {
 	}
@@ -42,6 +46,14 @@ public class Seats {
 
 	public void setLocalization(String localization) {
 		this.localization = localization;
+	}
+
+	public Clients getClient() {
+		return client;
+	}
+
+	public void setClient(Clients client) {
+		this.client = client;
 	}
 
 }

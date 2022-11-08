@@ -11,7 +11,7 @@ public class ProgramSelectingProducts {
 		
 		DAO<Products> dao = new DAO<>(Products.class);
 		
-		List<Products> productList = dao.obtainAll(5, 0);
+		List<Products> productList = dao.getAll(5, 0);
 		
 		for(Products product : productList) {
 			System.out.println(product.getName());
