@@ -9,8 +9,8 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "clients")
-public class Clients {
+@Table(name = "clients-for-seat")
+public class ClientsSeat {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,10 +21,10 @@ public class Clients {
 	@JoinColumn(name = "seat_id", unique = true)
 	private Seats seat;
 
-	public Clients() {
+	public ClientsSeat() {
 	}
 	
-	public Clients(String name, Seats seat) {
+	public ClientsSeat(String name, Seats seat) {
 		super();
 		this.name = name;
 		this.seat = seat;

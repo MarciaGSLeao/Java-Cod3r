@@ -17,7 +17,7 @@ public class Seats {
 	private String localization;
 	
 	@OneToOne(mappedBy = "seat")
-	private Clients client;
+	private ClientsSeat client;
 	
 	public Seats() {
 	}
@@ -48,11 +48,11 @@ public class Seats {
 		this.localization = localization;
 	}
 
-	public Clients getClient() {
+	public ClientsSeat getClient() {
 		return client;
 	}
 
-	public void setClient(Clients client) {
+	public void setClient(ClientsSeat client) {
 		this.client = client;
 	}
 

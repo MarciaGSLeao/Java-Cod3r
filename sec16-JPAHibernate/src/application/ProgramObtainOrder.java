@@ -12,7 +12,7 @@ public class ProgramObtainOrder {
 		
 		Orders order = dao.getById(1);
 		
-		for(Items item : order.getItemsList()) {
+		for(Items item : order.getItems()) {
 			System.out.printf("%s - %s = R$ %.2f", item.getQuantity(),item.getProduct().getName(), item.getTotalPriceByItem());
 		}
 		

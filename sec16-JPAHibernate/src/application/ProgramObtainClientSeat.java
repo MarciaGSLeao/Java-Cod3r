@@ -1,15 +1,15 @@
 package application;
 
 import infra.DAO;
-import model.oneToOne.Clients;
+import model.oneToOne.ClientsSeat;
 
 public class ProgramObtainClientSeat {
 	
 	public static void main(String[] args) {
 		
-		DAO<Clients> dao = new DAO<>(Clients.class);
+		DAO<ClientsSeat> dao = new DAO<>(ClientsSeat.class);
 		
-		Clients client = dao.getById(2);
+		ClientsSeat client = dao.getById(2);
 		System.out.println(client.getName() + " - " + client.getSeat().getLocalization());
 	
 		dao.close();

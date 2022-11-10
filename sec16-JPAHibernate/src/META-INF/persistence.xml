@@ -18,8 +18,9 @@
         <class>model.entities.Products</class>
         <class>model.oneToOne.Clients</class>
         <class>model.oneToOne.Seats</class>
-        <class>model.oneToMany.Orders</class>
+        <class>model.oneToMany.Clients</class>
         <class>model.oneToMany.Items</class>
+        <class>model.oneToMany.Orders</class>
         
         <properties>
         
