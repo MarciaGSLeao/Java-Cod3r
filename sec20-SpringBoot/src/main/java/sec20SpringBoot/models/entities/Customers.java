@@ -1,4 +1,4 @@
-package sec20SpringBoot.models;
+package sec20SpringBoot.models.entities;
 
 public class Customers {
 

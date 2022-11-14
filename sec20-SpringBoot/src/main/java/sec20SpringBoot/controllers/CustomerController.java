@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import sec20SpringBoot.models.Customers;
+import sec20SpringBoot.models.entities.Customers;
 
 @RestController
 @RequestMapping(path = "/customer")
