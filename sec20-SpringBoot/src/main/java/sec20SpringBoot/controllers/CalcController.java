@@ -11,16 +11,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class CalcController {
 
 	@GetMapping("/sum/{firstNumber}/{secondNumber}" )
-	public Double sum(
-			@PathVariable Double firstNumber,
-			@PathVariable Double secondNumber) {
+	public Double sum(@PathVariable Double firstNumber, @PathVariable Double secondNumber) {
 		return firstNumber + secondNumber;
 	}
 	
 	@GetMapping("/subtract")
-	public Double subtract(
-			@RequestParam(name = "firstNumber") Double firstNumber,
-			@RequestParam(name = "secondNumber") Double secondNumber) {
+	public Double subtract(@RequestParam(name = "firstNumber") Double firstNumber,@RequestParam(name = "secondNumber") Double secondNumber) {
 		return firstNumber - secondNumber;
 	}
 }

@@ -8,11 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(path = "/first")
 public class FirstController {
 	
-	/* @RequestMapping
-	            (method = RequestMethod.GET, path = "/ola") OU... */
+	// @RequestMapping (method = RequestMethod.GET, path = "/ola") OU...
 	@GetMapping
-	// OPÇÃO DE INSERIR URL's ALTERNATIVAS PARA O @GetMapping
-			// (path = {"/hello1", "hello2"})
+	// OPÇÃO DE INSERIR URL's ALTERNATIVAS PARA O @GetMapping (path = {"/hello1", "hello2"})
 	public String hello() {
 		return "Hello, Spring Boot!";
 	}

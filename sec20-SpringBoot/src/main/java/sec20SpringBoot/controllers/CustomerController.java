@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import sec20SpringBoot.models.entities.Customers;
+import sec20SpringBoot.model.entities.Customers;
 
 @RestController
 @RequestMapping(path = "/customer")
@@ -23,8 +23,7 @@ public class CustomerController {
 	}
 	
 	@GetMapping
-	public Customers getCustomerById2(
-			@RequestParam(name = "id") int id) {
+	public Customers getCustomerById2(@RequestParam(name = "id") int id) {
 		return new Customers(id, "Helena Gameleira", "222.333.444-55");
 	}
 }
