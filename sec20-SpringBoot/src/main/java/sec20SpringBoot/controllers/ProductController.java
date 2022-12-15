@@ -56,11 +56,17 @@ public class ProductController {
 		return productRepository.findById(id);
 	}
 	
+	@GetMapping(path="/name/{partOfName}")
+	public Iterable<Product> getProductByPartOfName(@PathVariable String partOfName){
+		 return productRepository.findByNameContainingIgnoreCase(partOfName);
+		// return productRepository.searchByNameLike(partOfName);
+	}
+	
 	// MÉTODO PARA PAGINAÇÃO DE ELEMENTOS.
-	@GetMapping(path="/page/{pageNumber}/{qtdElements}")
-	public Iterable<Product> getProductsByPages(@PathVariable Integer pageNumber, @PathVariable Integer qtdElements){
-		if (qtdElements > 10) qtdElements = 10;
-		PageRequest page = PageRequest.of(pageNumber, qtdElements);
+	@GetMapping(path="/page/{pageNumber}/{qtdElementsOnPage}")
+	public Iterable<Product> getProductsByPages(@PathVariable Integer pageNumber, @PathVariable Integer qtdElementsOnPage){
+		if (qtdElementsOnPage > 10) qtdElementsOnPage = 10;
+		PageRequest page = PageRequest.of(pageNumber, qtdElementsOnPage);
 		return productRepository.findAll(page);
 	}
 	
